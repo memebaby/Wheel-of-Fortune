@@ -14,9 +14,13 @@ My first project "Wheel of Fortune" is a game named after American TV programm w
 6) If the answer has been entered earlier, it will print "было(("
 7) If you finished the game (opened the whole word or stopped it by yourself), it will print "конец"
 ## Extra functions
+
 !p - print the quantity of attempts left
+
 !l - print the list of letters left
+
 !u - print the list of used letters
+
 !e - stop current try
 # Поле Чудес
 Мой первый проект "Поле Чудес" - это игра названная в честь российского телешоу "Поле Чудес", которая заключается в том, что нужно угадать слово буква за буквой
@@ -34,7 +38,11 @@ My first project "Wheel of Fortune" is a game named after American TV programm w
 6) Если ответ уже вводился, то она напишет "было(("
 7) Если вы закончили играть (открыли все слово или сами остановили), то игра выведет "конец"
 ## Допольнительные возможности
+
 !p - количество оставшихся попыток
+
 !l - список оставшихся букв
+
 !u - список использованных букв
+
 !e - остановить игру
