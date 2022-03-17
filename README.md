@@ -22,6 +22,8 @@ My first project "Wheel of Fortune" is a game named after American TV programm w
 !u - print the list of used letters
 
 !e - stop current try
+
+!h - list of the commands
 # Поле Чудес
 Мой первый проект "Поле Чудес" - это игра названная в честь российского телешоу "Поле Чудес", которая заключается в том, что нужно угадать слово буква за буквой
 ## Правила 
