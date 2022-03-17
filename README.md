@@ -46,3 +46,5 @@ My first project "Wheel of Fortune" is a game named after American TV programm w
 !u - список использованных букв
 
 !e - остановить игру
+
+!h - список команд
