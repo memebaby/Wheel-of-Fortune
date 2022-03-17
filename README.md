@@ -10,7 +10,7 @@ My first project "Wheel of Fortune" is a game named after American TV programm w
 2) Waits for your answer
 3) If it is right, the programm will print "правильно"
 4) Then it prints the word with all guessed letters
-5) If the answer is wrong, it will print "неправильно(("
+5) If the answer is wrong, it will print "все не то!"
 6) If the answer has been entered earlier, it will print "было(("
 7) If you finished the game (opened the whole word or stopped it by yourself), it will print "конец"
 ## Extra functions
