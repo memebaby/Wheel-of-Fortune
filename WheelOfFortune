@@ -11,46 +11,52 @@ print(m + u + r)
 p = 0
 while p < 10:
     ans = input()
+    if ans not in s2 and ans not in s3 and len(ans) != 3:
+        if ans == "!p":
+            print(10 - p)
+        if ans == "!l":
+            print(s2 - s1)
+        if ans == "!u":
+            print(s1)
+        if ans == "!e":
+            break
+        if ans == "!h": 
+            print("!p - количество оставшихся попыток / attempts left")
+            print("!l - оставшиеся буквы / letters left")
+            print("!u - использованные буквы / used letters")
+            print("!e - завершить / stop")
+        else:
+            print("все не то!")
+    if ans not in s4 and (ans in s2 or ans in s3):
+        print("все не то!")
+        s1.add(ans)
+    if ans in s5:
+        print("все не то!")
+    if len(ans) == 3:
+        if ans == "мур" or ans == "МУР" or ans == "Мур" or ans == "мУр" or ans == "муР" or ans == "МУр" or ans == "мУР" or ans == "МуР":
+            print("да")
+            break
+        else: 
+            p += 1
+            print("все не то!")
+    if ans == "м" or ans == "М":
+        m = "м"
+        s5.add("м")
+        s5.add("М")
+        s1.add(ans)
+        print(m + u + r)
+    if ans == "у" or ans == "У":
+        u = "у"
+        s5.add("У")
+        s5.add("у")
+        s1.add(ans)
+        print(m + u + r)
+    if ans == "р" or ans == "Р":
+        r = "р"
+        s5.add("Р")
+        s5.add("р")
+        s1.add(ans)
+        print(m + u + r)
     if m == "м" and u == "у" and r == "р":
         print("да")
         break
-    if (len(ans) != 1 and len(ans) != 3 and "!" not in ans) or (ans not in s2 and ans not in s3):
-        p += 1
-        print("все не то!")
-        if len(ans) == 1:
-	    s1.add(ans)
-    if ans in s5:
-	print("все не то!")
-    if ("М" or "м") in ans and ("У" or "у") in ans and ("Р" or "р") in ans:
-         print("да")
-         break
-    else: 
-        p += 1
-    if ans == "м" or ans == "М":
-	m = "м"
-	s5.add("м", "М")
-        s1.add(ans)
-	print(m + u + r)
-    if ans == "у" or ans == "У":
-        u = "у"
-	s5.add("У", "у")
-        s1.add(ans)
-	print(m + u + r)
-    if ans == "р" or ans == "Р":
-        r = "р"
-	s5.add("Р", "р")
-        s1.add(ans)
-	print(m + u + r)
-    if ans == "!p":
-        print(10 - p)
-    if ans == "!l":
-        print(s2 - s1)
-    if ans == "!u":
-        print(s1)
-    if ans == "!e":
-        break
-    if ans == "!h": 
-        print("!p - количество оставшихся попыток / attempts left")
-        print("!l - оставшиеся буквы / letters left")
-        print("!u - использованные буквы / used letters")
-        print("!e - завершить / stop")
