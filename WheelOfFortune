@@ -33,7 +33,7 @@ while p < 10:
     if ans in s5:
         print("все не то!")
     if len(ans) == 3:
-        if ans == "мур" or ans == "МУР" or ans == "Мур" or ans == "мУр" or ans == "муР" or ans == "МУр" or ans == "мУР" or ans == "МуР":
+        if lower(ans) == "мур":
             print("да")
             break
         else: 
