@@ -1,43 +1,43 @@
-print("угадай слово")
-s1 = set()
-s2 = set("йцукенгшщзхъфывапролджэячсмитьбюё")
-s4 = set("мур")
-s5 = set()
-m = "*"
+print("угадай слово") ## запрос
+s1 = set() ## использованные
+s2 = set("йцукенгшщзхъфывапролджэячсмитьбюё") ## русский алфавит
+s4 = set("мур") ## буквы слова
+s5 = set() ## использованные буквы слова
+m = "*" ## шифруем буквы
 u = "*"
 r = "*"
-print(m + u + r)
-p = 0
-while p < 10:
-    ans = input()
-    if ans.lower() not in s2 and len(ans) != 3:
-        if ans == "!p":
-            print(10 - p)
+print(m + u + r) ## показываем зашифрованное
+p = 0 ## устанавливаем счетчик попыток
+while p < 10: ## пока 10 попыток не закончились
+    ans = input() ## спросить ответ
+    if ans.lower() not in s2 and len(ans) != 3: ## если слово мелкими буквами не буква алфавита и это не попытка ввести слово (3 знака)
+        if ans == "!p": ## если не команда
+            print(10 - p) ## сколько попыток осталось
         if ans == "!l":
-            print(s2 - s1)
+            print(s2 - s1) ## какие буквы остались
         if ans == "!u":
-            print(s1)
-        if ans == "!e":
-            break
-        if ans == "!h": 
-            print("!p - количество оставшихся попыток / attempts left")
+            print(s1) ## использованные буквы
+        if ans == "!e": 
+            break ## остановка игры
+        if ans == "!h":  
+            print("!p - количество оставшихся попыток / attempts left") ##список команд
             print("!l - оставшиеся буквы / letters left")
             print("!u - использованные буквы / used letters")
             print("!e - завершить / stop")
-        else:
-            print("все не то!")
+        else: ## если не буква алфавита и не команда и не слово
+            print("попробуй еще")
     if ans.lower() not in s4 and (ans.lower() in s2):
-        print("все не то!")
+        print("попробуй еще")
         s1.add(ans)
     if ans in s5:
-        print("все не то!")
+        print("попробуй еще")
     if len(ans) == 3:
         if ans.lower() == "мур":
             print("да")
             break
         else: 
             p += 1
-            print("все не то!")
+            print("попробуй еще")
     if ans.lower() == "м":
         m = "м"
         s5.add("м")
