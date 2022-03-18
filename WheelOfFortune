@@ -1,8 +1,7 @@
 print("угадай слово")
 s1 = set()
 s2 = set("йцукенгшщзхъфывапролджэячсмитьбюё")
-s3 = set("ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮЁ")
-s4 = set("МмУуРр")
+s4 = set("мур")
 s5 = set()
 m = "*"
 u = "*"
@@ -11,7 +10,7 @@ print(m + u + r)
 p = 0
 while p < 10:
     ans = input()
-    if ans not in s2 and ans not in s3 and len(ans) != 3:
+    if ans.lower() not in s2 and len(ans) != 3:
         if ans == "!p":
             print(10 - p)
         if ans == "!l":
@@ -27,33 +26,30 @@ while p < 10:
             print("!e - завершить / stop")
         else:
             print("все не то!")
-    if ans not in s4 and (ans in s2 or ans in s3):
+    if ans.lower() not in s4 and (ans.lower() in s2):
         print("все не то!")
         s1.add(ans)
     if ans in s5:
         print("все не то!")
     if len(ans) == 3:
-        if lower(ans) == "мур":
+        if ans.lower() == "мур":
             print("да")
             break
         else: 
             p += 1
             print("все не то!")
-    if ans == "м" or ans == "М":
+    if ans.lower() == "м":
         m = "м"
         s5.add("м")
-        s5.add("М")
         s1.add(ans)
         print(m + u + r)
-    if ans == "у" or ans == "У":
+    if ans.lower() == "у":
         u = "у"
-        s5.add("У")
         s5.add("у")
         s1.add(ans)
         print(m + u + r)
     if ans == "р" or ans == "Р":
         r = "р"
-        s5.add("Р")
         s5.add("р")
         s1.add(ans)
         print(m + u + r)
